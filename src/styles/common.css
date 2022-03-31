@@ -10,6 +10,8 @@
     --white-color : #ffffff;
     --correct-option: #2dcc70;
     --wrong-option: #e32529;
+    --hot-color: #ff55a4;
+    --dark-hot-color: #fd2a8c;
 }
 
 *{
