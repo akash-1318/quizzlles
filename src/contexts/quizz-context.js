@@ -13,12 +13,14 @@ const QuizzContextProvider = ({children}) => {
         level : null,
         currentQue : 0,
         options : [],
+        score : 0,
+        newQuestionData : [],
+        correctOptions : [],
     })
     useEffect(()=>{
         const questionData = async() => {
             try{
                 const {data : {results}} = await axios.get(`https://opentdb.com/api.php?amount=10&category=${quizzState.categoryValue}&difficulty=${quizzState.level}&type=multiple`)
-                console.log(results)
                 quizzDispatch({type : "SET_QUESTIONS", payload: results})
             } catch(err){
                 console.log(err)

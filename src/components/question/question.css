@@ -8,7 +8,7 @@
 
 .quiz__question{
     max-width: 90rem;
-    margin: 4rem auto 10rem auto;
+    margin: 4rem auto 0rem auto;
 }
 
 .question__text{

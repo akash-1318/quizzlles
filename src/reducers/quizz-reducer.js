@@ -18,6 +18,12 @@ const quizzReducer = (state, action) => {
             return {...state, currentQue : 0}
         case "DISABLE_LEVEL":
             return {...state, level : null}
+        case "SET_SCORE":
+            return {...state, score : state.score + 1}
+        case "RESULT_DATA":
+            return {...state, newQuestionData : [...state.newQuestionData, payload]}
+        case "SET_CORRECT_OPTION":
+            return {...state, correctOptions : [...state.correctOptions, payload]}
         default:
             break;
     }

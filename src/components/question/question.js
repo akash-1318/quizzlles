@@ -8,7 +8,7 @@ const Question = () => {
   const [options, setOptions] = useState([]);
   const [selected, setSelected] = useState();
   const { quizzState, quizzDispatch } = useQuizzContext();
-  const { questionData, currentQue } = quizzState;
+  const { questionData, currentQue, newQuestionData, correctOptions } = quizzState;
 
   useEffect(() => {
     setOptions(
@@ -42,6 +42,13 @@ const Question = () => {
 
   const handleSelect = (optionItem) => {
     setSelected(optionItem);
+    if(optionItem === questionData[currentQue]?.correct_answer){
+        quizzDispatch({type:"SET_SCORE"})
+    }
+    const newData = {newQuestion : questionData[currentQue].question, newOptions : [options]}
+    quizzDispatch({type : "RESULT_DATA", payload : newData})
+    const correctOption = optionItem
+    quizzDispatch({type : "SET_CORRECT_OPTION", payload : correctOption})
   };
 
   useEffect(() => {
@@ -94,7 +101,7 @@ const Question = () => {
             </button>
             {currentQue === 9 ? (
               <>
-                <button className="option__name next__btn">
+                <button className="option__name next__btn" onClick={() => {navigate("/result")}}>
                   Submit your Answers
                 </button>
               </>
