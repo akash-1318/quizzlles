@@ -61,6 +61,7 @@ const Result = () => {
           )
         })}
       </main>
+      <Footer/>
     </>
   );
 };
