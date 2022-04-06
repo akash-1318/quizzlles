@@ -97,7 +97,7 @@ const Question = () => {
           <div className="space__2rem"></div>
           <div className="game__play-controlls">
             <button className="option__name quit__btn" onClick={handleQuite}>
-              Quite
+              Quit
             </button>
             {currentQue === 9 ? (
               <>
