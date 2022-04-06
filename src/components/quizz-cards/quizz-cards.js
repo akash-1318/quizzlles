@@ -1,6 +1,10 @@
 import "./quizz-cards.css";
+import {Link} from 'react-router-dom'
+import { useQuizzContext } from "../../contexts/quizz-context";
 
-const QuizzCard = ({items}) => {
+const QuizzCard = ({ items }) => {
+    const {quizzState, quizzDispatch} = useQuizzContext()
+    
   return (
     <div className="card">
       <div className="card__container">
@@ -15,7 +19,9 @@ const QuizzCard = ({items}) => {
           <p className="card__charc-name">{items.category}</p>
           <p className="card__charc-series">Take this quiz to test yourself</p>
           <div className="play__cta">
-            <button className="btn solid__primary">Play</button>
+              <Link to = '/rules'>
+              <button className="btn solid__primary play__btn" onClick = {() => quizzDispatch({type : "PLAY_CLICK", payload : items})}>Play</button>
+              </Link>
           </div>
         </div>
       </div>
