@@ -19,7 +19,7 @@ const QuizzContextProvider = ({children}) => {
                 console.log(results)
                 quizzDispatch({type : "SET_QUESTIONS", payload: results})
             } catch(err){
-                console.log(err)
+                alert("Some error occurred")
             }
         }
         questionData()
