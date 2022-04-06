@@ -1,6 +1,5 @@
 const quizzReducer = (state, action) => {
     const {type, payload} = action
-    
     switch (type) {
         case "SET_QUESTIONS":
             return {...state, questionData : payload}
@@ -24,6 +23,8 @@ const quizzReducer = (state, action) => {
             return {...state, newQuestionData : [...state.newQuestionData, payload]}
         case "SET_CORRECT_OPTION":
             return {...state, correctOptions : [...state.correctOptions, payload]}
+        case "KILL_QUESTION_DATA":
+            return {...state, newQuestionData : [], score : 0}
         default:
             break;
     }

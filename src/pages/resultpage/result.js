@@ -21,7 +21,7 @@ const Result = () => {
         <div className="space__2rem"></div>
           <div className="space__2rem"></div>
           <div className="space__2rem"></div>
-        {newQuestionData.map((newDataItem) => {
+        {newQuestionData.map((newDataItem, index) => {
           return(
             <>
             <div className="quiz__question">
@@ -31,7 +31,7 @@ const Result = () => {
             </p>
             <div className="question__number">
               <p>
-                Question {newQuestionData.length}
+                Question {index + 1} / {newQuestionData.length}
               </p>
             </div>
           </div>
