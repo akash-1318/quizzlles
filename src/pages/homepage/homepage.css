@@ -1,0 +1,53 @@
+.home__main {
+    padding: 4rem 1rem;
+    width: 100%;
+}
+
+.main__heading{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.quiz__card-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: scroll;
+    gap: 5rem;
+    padding: 3rem;
+}
+
+.card{
+    min-width: 27rem;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+.card__img{
+    margin-bottom: 0rem;
+}
+
+.card__img-c{
+    height: 18rem;
+}
+
+.card__name{
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.play__cta > .btn{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.footer__style{
+    background-color: var(--primary-color);
+    margin-top: 6.5rem;
+}
+
+.footer__text{
+    color: var(--white-color);
+}

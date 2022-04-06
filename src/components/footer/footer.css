@@ -1,0 +1,8 @@
+.footer__style{
+    background-color: var(--primary-color);
+    margin-top: 6.5rem;
+}
+
+.footer__text{
+    color: var(--white-color);
+}
