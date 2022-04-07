@@ -11,6 +11,7 @@ const Question = () => {
   const { questionData, currentQue, } = quizzState;
 
   useEffect(() => {
+    setSelected();
     setOptions(
       questionData &&
         shuffleOptions([
@@ -18,7 +19,7 @@ const Question = () => {
           ...questionData[currentQue]?.incorrect_answers,
         ])
     );
-  }, [questionData[currentQue]]);
+  }, [currentQue]);
 
   const shuffleOptions = (optionss) => {
     return optionss.sort(() => Math.random() - 0.5);
@@ -51,9 +52,6 @@ const Question = () => {
     quizzDispatch({type : "SET_CORRECT_OPTION", payload : correctOption})
   };
 
-  useEffect(() => {
-    setSelected();
-  }, [currentQue]);
 
   const handleQuite = () => {
     navigate("/");

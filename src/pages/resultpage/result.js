@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Navigation } from "../../components/navigation/navigation";
 import { Footer } from "../../components/footer/footer";
 import { useQuizzContext } from "../../contexts/quizz-context";
-import { useState } from "react";
 
 const Result = () => {
     const {quizzState} = useQuizzContext();
