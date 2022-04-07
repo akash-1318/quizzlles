@@ -1,10 +1,12 @@
 import "./rules.css";
+import {Link} from 'react-router-dom'
 import { Navigation } from "../../components/navigation/navigation";
 import { Footer } from "../../components/footer/footer";
 import { useQuizzContext } from "../../contexts/quizz-context";
+import { useState } from "react";
 const Rules = () => {
+    const [disable, setDisable] = useState(false)
     const {quizzState, quizzDispatch} = useQuizzContext();
-    
   return (
     <>
       <Navigation />
@@ -62,12 +64,20 @@ const Rules = () => {
               </div>
             </div>
             <div className="rules__cta">
-              <button className="btn solid__primary icon__btn">
+                <Link to="/" className="link__tag">
+                <button className="btn solid__primary icon__btn">
                 <i className="bx bxs-left-arrow"></i>Go back
               </button>
-              <button className="btn solid__primary icon__btn continue__btn">
+                </Link>
+                <Link to="/quizz" className="link__tag">
+                <button 
+                className={`btn solid__primary icon__btn continue__btn ${quizzState.questionData.length > 0 ? "" : "disabled"}`} 
+                disabled = {quizzState.questionData.length > 0 ? false : true}
+                onClick = {() => quizzDispatch({type : "SET_QUESTION_ONE"})}
+                >
                 Continue <i className="bx bxs-right-arrow"></i>
               </button>
+                </Link>
             </div>
           </div>
         </div>

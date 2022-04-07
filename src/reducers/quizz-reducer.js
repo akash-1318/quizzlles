@@ -12,6 +12,12 @@ const quizzReducer = (state, action) => {
             return {...state, level : "medium"}
         case "HARD":
             return {...state, level : "hard"}
+        case "NEXT_QUESTION":
+            return {...state, currentQue : state.currentQue + 1}
+        case "SET_QUESTION_ONE":
+            return {...state, currentQue : 0}
+        case "DISABLE_LEVEL":
+            return {...state, level : null}
         default:
             break;
     }

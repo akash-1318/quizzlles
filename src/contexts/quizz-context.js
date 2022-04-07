@@ -11,6 +11,8 @@ const QuizzContextProvider = ({children}) => {
         categoryValue : null,
         image : null,
         level : null,
+        currentQue : 0,
+        options : [],
     })
     useEffect(()=>{
         const questionData = async() => {

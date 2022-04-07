@@ -1,9 +1,28 @@
 import "./homepage.css";
+import {useEffect} from 'react'
+import { useLocation } from 'react-router-dom'
 import { Categories } from "../../database/category";
 import { Navigation } from "../../components/navigation/navigation";
 import { QuizzCard } from "../../components/quizz-cards/quizz-cards";
 import { Footer } from "../../components/footer/footer";
+import { useQuizzContext } from "../../contexts/quizz-context";
+
 const Homepage = () => {
+
+  const {quizzState, quizzDispatch} = useQuizzContext()
+  const {} = quizzState;
+
+  const path = useLocation();
+
+    const testFunc = () => {
+      if(path.pathname === "/"){
+      quizzDispatch({type : "DISABLE_LEVEL"})
+    }
+    }
+    useEffect(()=>{
+      testFunc()
+    },[])
+
   return (
     <>
       <Navigation />
