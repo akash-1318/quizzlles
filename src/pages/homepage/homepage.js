@@ -9,8 +9,7 @@ import { useQuizzContext } from "../../contexts/quizz-context";
 
 const Homepage = () => {
 
-  const {quizzState, quizzDispatch} = useQuizzContext()
-  const {} = quizzState;
+  const {quizzDispatch} = useQuizzContext()
 
   const path = useLocation();
 

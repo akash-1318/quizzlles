@@ -1,5 +1,5 @@
 import "./question.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useQuizzContext } from "../../contexts/quizz-context";
 import { useEffect, useState } from "react";
 
@@ -8,7 +8,7 @@ const Question = () => {
   const [options, setOptions] = useState([]);
   const [selected, setSelected] = useState();
   const { quizzState, quizzDispatch } = useQuizzContext();
-  const { questionData, currentQue, newQuestionData, correctOptions } = quizzState;
+  const { questionData, currentQue, } = quizzState;
 
   useEffect(() => {
     setOptions(

@@ -5,7 +5,6 @@ import { Question } from "../../components/question/question";
 import { useQuizzContext } from "../../contexts/quizz-context";
 const Quizzpage = () => {
     const {quizzState} = useQuizzContext();
-    const {questionData, currentQue} = quizzState;
   return (
     <>
       <Navigation />

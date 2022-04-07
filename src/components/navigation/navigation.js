@@ -6,7 +6,7 @@ const Navigation = () => {
         <header className="header__nav">
         <div className="header__nav-left">
             <Link to = "/">
-                <img src="/assets/images/galaxy.png" className="library__logo" />
+                <img src="/assets/images/galaxy.png" alt="logo" className="library__logo" />
             </Link>
             <Link to = "/" className="logo__name-link">
                 <p className="library__logo-name">Quizzles</p>

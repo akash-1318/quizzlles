@@ -6,8 +6,6 @@ import { useQuizzContext } from "../../contexts/quizz-context";
 import { useState } from "react";
 
 const Result = () => {
-  const [check, setCheck] = useState(0)
-  const [select, setSelect] = useState(false)
     const {quizzState} = useQuizzContext();
     const {questionData,newQuestionData,score, correctOptions} = quizzState
 
