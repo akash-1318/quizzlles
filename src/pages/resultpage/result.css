@@ -23,3 +23,8 @@
     background-color: var(--correct-option);
     color: var(--white-color);
 }
+
+.back__home-btn{
+    padding: 1rem 6rem;
+    text-align: center;
+}

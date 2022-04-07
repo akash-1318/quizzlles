@@ -1,4 +1,5 @@
 import "./result.css";
+import { Link } from "react-router-dom";
 import { Navigation } from "../../components/navigation/navigation";
 import { Footer } from "../../components/footer/footer";
 import { useQuizzContext } from "../../contexts/quizz-context";
@@ -60,6 +61,10 @@ const Result = () => {
             </>
           )
         })}
+        <Link to = '/'>
+              <button className="btn solid__primary back__home-btn" 
+              >Go To Home</button>
+              </Link>
       </main>
       <Footer/>
     </>
