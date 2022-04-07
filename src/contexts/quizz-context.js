@@ -27,7 +27,7 @@ const QuizzContextProvider = ({children}) => {
             }
         }
         questionData()
-    },[quizzState.level],[quizzState.categoryValue])
+    },[quizzState.level, quizzState.categoryValue])
     return(
         <QuizzContext.Provider value={{quizzState, quizzDispatch}}>
             {children}

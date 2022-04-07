@@ -21,7 +21,7 @@ const Homepage = () => {
       }
       }
       testFunc()
-    },[])
+    })
 
   return (
     <>

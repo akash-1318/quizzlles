@@ -19,7 +19,7 @@ const Question = () => {
           ...questionData[currentQue]?.incorrect_answers,
         ])
     );
-  }, [currentQue],[questionData]);
+  },[currentQue, questionData]);
 
   const shuffleOptions = (optionss) => {
     return optionss.sort(() => Math.random() - 0.5);
