@@ -14,5 +14,6 @@ This is a quizz app contains multiple quizzes based on different categories crea
 2. Reducer
 3. Routing
 
+https://quizzlles.netlify.app/
 
 
