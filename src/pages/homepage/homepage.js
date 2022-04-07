@@ -13,13 +13,13 @@ const Homepage = () => {
 
   const path = useLocation();
 
-    const testFunc = () => {
-      if(path.pathname === "/"){
-      quizzDispatch({type : "DISABLE_LEVEL"})
-      quizzDispatch({type : "KILL_QUESTION_DATA"})
-    }
-    }
     useEffect(()=>{
+      const testFunc = () => {
+        if(path.pathname === "/"){
+        quizzDispatch({type : "DISABLE_LEVEL"})
+        quizzDispatch({type : "KILL_QUESTION_DATA"})
+      }
+      }
       testFunc()
     },[])
 
