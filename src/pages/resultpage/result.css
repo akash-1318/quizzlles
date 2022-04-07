@@ -28,3 +28,9 @@
     padding: 1rem 6rem;
     text-align: center;
 }
+
+@media only screen and (max-width : 500px){
+    .final__score-heading{
+        font-size: 12rem;
+    }
+}

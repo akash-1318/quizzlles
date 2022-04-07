@@ -101,3 +101,12 @@
 .next__btn:hover {
     background-color: var(--back-color);
 }
+
+@media only screen and (max-width : 500px){
+    .options{
+        grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    }
+    .quiz__main{
+        padding: 5rem 5rem;
+    }
+}
